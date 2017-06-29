@@ -12,7 +12,8 @@ var app = app || {};
       url: 'https://api.github.com/user/repos',
       headers: token,
       success: (data, message) => {
-        repo.all = data;
+        repo.all = data.filter(item => item.description !== null);
+        callback();
         console.log(message);
       }
     })

@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="vendor/styles/icomoon.css">
+    <script id="project-template" type="text/x-handlebars-template">
+      <li>
+        <h3>{{name}}</h3>
+        <p>{{created_at}}</p>
+        <a href="{{html_url}}">{{html_url}}</a>
+        <p>{{description}}</p>
+      </li>
     </script>
   </head>
   <body>
@@ -36,10 +43,17 @@
 
     <main>
       <section id="about">
-        <!-- a few summary paragraphs -->
+        <p>I am a rookie web developer native to Washington state. I started learning HTML and CSS in 2017 and decided that I liked it. I thought that web development would be a good career change for me so, with a little encouragement from my family, I decided to go to a Seattle code school called Code Fellows.</p>
+
+        <p>It was a bit nerve racking because I had a history of losing interest and dropping out of higher education and I wasn’t certain that this endeavor wouldn’t end up the same way. In the end, I found that I really enjoy web development and the satisfaction that comes from solving problems to create a product.</p>
+
+        <p>While I enjoy web development, it is not the only career path that interests me. I have always had an great interest in video games and would love to work towards a job in game development in the long term. For the time being however, I am ready and willing to learn and gain invaluable work experience in any computer programming field.</p>
       </section>
+      
       <section id="projects">
-        <!-- github api insertion -->
+        <ul id="repo-list">
+          <!-- github api insertion -->
+        </ul>
       </section>
     </main>
 
@@ -52,7 +66,11 @@
 
     <script src="vendor/scripts/jquery.js"></script>
     <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/page.js"></script>
     <script src="scripts/models/ghToken.js"></script>
     <script src="scripts/models/ghRepo.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+    <script src="scripts/controllers/repoController.js"></script>
+    <script src="scripts/controllers/route.js"></script>
   </body>
 </html>
