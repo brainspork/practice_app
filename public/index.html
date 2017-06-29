@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="vendor/styles/icomoon.css">
+    <script id="project-template" type="text/x-handlebars-template">
+      <li>
+        <h3>{{name}}</h3>
+        <p>{{created_at}}</p>
+        <a href="{{html_url}}">{{html_url}}</a>
+        <p>{{description}}</p>
+      </li>
     </script>
   </head>
   <body>
@@ -39,7 +46,9 @@
         <!-- a few summary paragraphs -->
       </section>
       <section id="projects">
+        <ul id="repo-list">
         <!-- github api insertion -->
+        </ul>
       </section>
     </main>
 
@@ -54,5 +63,6 @@
     <script src="vendor/scripts/handlebars.js"></script>
     <script src="scripts/models/ghToken.js"></script>
     <script src="scripts/models/ghRepo.js"></script>
+    <script src="scripts/views/repoView.js"></script>
   </body>
 </html>
