@@ -137,4 +137,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# auto-generated tag files
+tags
+ghToken.js
+
 # End of https://www.gitignore.io/api/vim,node,macos,linux,windows
